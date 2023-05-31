@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/application.js"></script>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <title> Shopping Cart</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">The Goodies</h1>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity ($)</th>
+              <th scope="col">Total Cost ($)</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name">Spinach</td>
+              <td class="prices">6</td>
+              <td class="quantities"><input type='number' value='50' /></td>
+              <td class="totalCost"></td>
+              <td><button class="btn btn-light btn-sm remove">remove</button></td>
+            </tr>
+            <tr>
+              <td class="name">Apples</td>
+              <td class="prices">5</td>
+              <td class="quantities"><input type='number' value='20' /></td>
+              <td class="totalCost"></td>
+              <td><button class="btn btn-light btn-sm remove">remove</button></td>
+            </tr>
+            <tr>
+              <td class="name">Snickers Bars</td>
+              <td class="prices">1</td>
+              <td class="quantities"><input type='number' value='80' /></td>
+              <td class="totalCost"></td>
+              <td><button class="btn btn-light btn-sm remove">remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <form class="col-12 mt-2 mb-4" id="addFood">
+              <input class="mx-2" name="name" type="text" placeholder="Item" required />
+              <input class="mx-2" name="prices" type="number" placeholder="Price" />
+              <input class="mx-2" name="quantities" type="number" placeholder="Quantity" />
+              <button class="btn btn-primary btn-sm">add</button>
+        </form>
+      </div>
+      <div class=" col-12 col-md-6">
+        <h3>Total Cart Amount: $ <span id="totalCart"></span></h2>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

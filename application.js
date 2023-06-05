@@ -6,7 +6,7 @@ $(document).ready(function () {
     });
 
     var timeout;
-    $('tr input').on('input', function () {
+    $('table').on('input', 'tr input', function () {
         clearTimeout(timeout);
         timeout = setTimeout(function () {
             updateCart();
@@ -43,7 +43,7 @@ var updateCart = function () {
         foodTotals.push(totalCost);
     })
 
-    var grandSum = foodTotals.reduce(sum);
+    var grandSum = foodTotals.reduce(sum, 0);
     $("#totalCart").html(grandSum);
 }
 
